@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>json/cridentials_encrypted.json</file>
+        <file>img/key1.jpg</file>
+    </qresource>
+</RCC>
