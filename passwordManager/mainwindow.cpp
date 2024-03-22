@@ -27,6 +27,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->incorrectPasswordLabel->setVisible(false);
 
     ui->lineEdit_2->setFocus();
+    ui->lineEdit_2->setEchoMode(QLineEdit::Password);
+
+    ui->lineEdit_2->setEchoMode(QLineEdit::Password);
 
 }
 
@@ -141,7 +144,6 @@ int MainWindow::decryptQByteArray(const QByteArray& encryptedBytes, QByteArray& 
           EVP_CIPHER_CTX_free(ctx);
           return -1;
       }
-    // qDebug() << "***EVP_DecryptFinal_ex " << reinterpret_cast<char*>(decrypted_buf);
     decryptedBuffer.write(reinterpret_cast<char*>(decrypted_buf), tmplen);
     EVP_CIPHER_CTX_free(ctx);
 
